@@ -1,4 +1,13 @@
-# Site for redtailsppg company
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/Vxiyan/redtailsppg?utm_source=oss&utm_medium=github&utm_campaign=Vxiyan%2Fredtailsppg&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+# Redtails PPG
+
+### ℹ️ About us
+**Redtails PPG** is a company that is focused on providing flights for fun experiences. We mainly do flights with drone footage of your flight.
+### 🫂 Our Team
+- **Neosha Broady**: CEO
+- **Daniel Murchie**: Lead Developer and Drone Pilot
+### 📱 Contact
+Email:[ERR](https://google.com)
 <br>
-https://www.redtailsppg.com
+Phone:[ERR](https://google.com)
+<br>
+Website:[Redtails PPG](https://www.redtailsppg.com)
