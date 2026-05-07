@@ -1,0 +1,98 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+}
+header{
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 20px 40px 5px rgb(0, 0, 0);
+    border-radius: 50px;
+    z-index: 100;
+}
+.header-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+nav{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color:#f0f0f0;
+}
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.logo-head{
+    width: 40px;
+    height: 40px;
+}
+#home{
+    margin-top: 50px;
+}
+.home-scheduling{
+    background-color: #c54040;
+    padding: 20px;
+    width:100%;
+}
+.home-scheduling p{
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.status-available {
+    color: #4dfd4d !important; /* Bright green */
+}
+.status-unavailable {
+    color: #ffeb3b !important; /* Yellow for warning on red background */
+}
+.logo-bg{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+}
+
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+div.scroll-container img {
+    padding: 10px;
+    height: 300px;
+    display: inline-block;
+    width: 500px;
+    animation: scroll-container 10s linear infinite;
+}
+
+@keyframes scroll-container{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-305%);
+    }
+    
+}
