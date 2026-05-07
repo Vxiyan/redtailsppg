@@ -96,3 +96,31 @@ div.scroll-container img {
     }
     
 }
+
+.footer{
+    background-color: #333;
+    height:20%;
+    color:#fff;
+    padding:10px;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color:inherit;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration:underline;
+    color:inherit;
+    text-decoration-thickness: 2px;
+}
+
+.contactSec {
+    background-color: #c54040;
+    display: inline-block;
+    position:sticky;
+    
+    padding:20px;
+}
