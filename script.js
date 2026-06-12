@@ -1,13 +1,11 @@
-// Mock availability for April 2024
 // true = available, false = booked
-const aprilAvailability = {
-    "2026-04-01": false,
-    "2026-04-05": false,
-    "2026-04-10": false,
-    "2026-04-15": false,
-    "2026-04-20": true,
-    "2026-04-25": true
-};
+let takenDatesDatabase = [
+    new Date('2026-09-15'),  // September 15
+    new Date('2026-07-23'),  // July 23
+    new Date('2026-06-20'),  // June 20
+    new Date('2026-05-21'),  // May 21
+    new Date('2026-07-22')   // July 22
+]
 
 const form = document.getElementById('appointment-form');
 const nameInput = document.getElementById('appointment-name');
@@ -35,22 +33,28 @@ function updateFormStatus() {
 function checkAvailability(dateString) {
     const selectedDate = new Date(dateString);
     // getMonth() is 0-indexed, so April is 3
-    const isApril = selectedDate.getMonth() === 3;
+    let currentDate = new Date();
+    let lastMinuteProt = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + 7);
+    console.log(selectedDate);
+    console.log(lastMinuteProt);
+    console.log(selectedDate <= lastMinuteProt);
 
-    if (!isApril) {
-        statusText.textContent = "Please select a date in April.";
+
+    if (selectedDate <= lastMinuteProt) {
+        statusText.textContent = "Please select a date that is a week in advance.";
         statusText.className = "status-unavailable";
         submitBtn.disabled = true;
         return;
     }
 
-    const isAvailable = aprilAvailability[dateString];
+    const selectedTimestamp = selectedDate.getTime();
+    const isNotAvailable = takenDatesDatabase.some(date => date.getTime() === selectedTimestamp);
 
-    if (isAvailable === true) {
+    if (isNotAvailable === false) {
         statusText.textContent = "Date is Available!";
         statusText.className = "status-available";
         submitBtn.disabled = false;
-    } else if (isAvailable === false) {
+    } else if (isNotAvailable === true) {
         statusText.textContent = "Date is already booked.";
         statusText.className = "status-unavailable";
         submitBtn.disabled = true;
