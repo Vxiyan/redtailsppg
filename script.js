@@ -47,7 +47,8 @@ function checkAvailability(dateString) {
         return;
     }
 
-    const isNotAvailable = takenDatesDatabase.includes(selectedDate);
+    const selectedTimestamp = selectedDate.getTime();
+    const isNotAvailable = takenDatesDatabase.some(date => date.getTime() === selectedTimestamp);
 
     if (isNotAvailable === false) {
         statusText.textContent = "Date is Available!";
