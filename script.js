@@ -1,10 +1,10 @@
 // true = available, false = booked
 let takenDatesDatabase = [
-    new Date('2026-09-15'),  // September 15
-    new Date('2026-07-23'),  // July 23
-    new Date('2026-06-20'),  // June 20
-    new Date('2026-05-21'),  // May 21
-    new Date('2026-07-22')   // July 22
+    new Date(2026, 8, 15),
+    new Date(2026, 6, 23),
+    new Date(2026, 5, 20),
+    new Date(2026, 4, 21),
+    new Date(2026, 6, 22)
 ]
 
 const form = document.getElementById('appointment-form');
@@ -47,8 +47,7 @@ function checkAvailability(dateString) {
         return;
     }
 
-    const selectedTimestamp = selectedDate.getTime();
-    const isNotAvailable = takenDatesDatabase.some(date => date.getTime() === selectedTimestamp);
+    const isNotAvailable = takenDatesDatabase.includes(selectedDate);
 
     if (isNotAvailable === false) {
         statusText.textContent = "Date is Available!";
